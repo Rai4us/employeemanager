@@ -4,11 +4,13 @@ import com.edu.employeemanager.exception.UserNotFoundException;
 import com.edu.employeemanager.model.Employee;
 import com.edu.employeemanager.repositories.EmployeeRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.UUID;
 
 @Service
+@Transactional
 public class EmployeeService {
 
     private final EmployeeRepository employeeRepository;
